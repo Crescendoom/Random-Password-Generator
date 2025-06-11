@@ -189,8 +189,8 @@ button:hover {
 .toast {
     visibility: hidden;
     min-width: 200px;
-    background-color: #444;
-    color: #fff;
+    background-color: #1f1f3d;
+    color: #00ff7f;
     text-align: center;
     border-radius: 6px;
     padding: 10px 16px;
