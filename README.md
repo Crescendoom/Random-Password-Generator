@@ -2,7 +2,7 @@
 
 A responsive, clean web-based Random Password Generator that assists in generating secure, strong passwords. The generator is designed to be simple and efficient, with optional symbols and numbers, length option, and click-to-copy functionality.
 
-<a href="https://random-password-generator-ebon-phi.vercel.app/" target="_blank">🔗 Open Random Password Generator" </a>
+<a href="https://random-password-generator-ebon-phi.vercel.app/" target="_blank">🔗 Open Random Password Generator </a>
 
 ## Usage
 1. Adjust the **slider** to choose your desired password length (between 8 and 16 characters).
