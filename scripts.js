@@ -76,3 +76,7 @@ slider.oninput = function()
     passwordLengthDisplay.textContent = this.value;
 }
 passwordLengthDisplay.textContent = slider.value;
+
+
+
+/*ADD COPY TEXT BUTTON */ 
