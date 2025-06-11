@@ -80,14 +80,24 @@ passwordLengthDisplay.textContent = slider.value;
 /* copy to clipboard */
 function copyPassword(elementId) {
     const text = document.getElementById(elementId).textContent;
-    if (!text) {
-        alert("No password to copy!");
-        return;
-    }
+    if (!text) return;
 
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Password copied to clipboard!");
-    }).catch(err => {
-        console.error("Failed to copy: ", err);
-    });
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            showToast("Password copied!");
+        })
+        .catch(err => {
+            console.error("Failed to copy:", err);
+        });
+}
+
+/* toast message popup */
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2000);
 }
