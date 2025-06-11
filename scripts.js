@@ -77,6 +77,17 @@ slider.oninput = function()
 }
 passwordLengthDisplay.textContent = slider.value;
 
+/* copy to clipboard */
+function copyPassword(elementId) {
+    const text = document.getElementById(elementId).textContent;
+    if (!text) {
+        alert("No password to copy!");
+        return;
+    }
 
-
-/*ADD COPY TEXT BUTTON */ 
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Password copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy: ", err);
+    });
+}
