@@ -14,8 +14,20 @@ const slider = document.getElementById("myRange");
 const passwordLengthDisplay = document.getElementById("passwordLength");
 const password1 = document.getElementById("password1");
 const password2 = document.getElementById("password2");
+const generateButton = document.getElementById("generate-btn");
 const includeNumbers = document.getElementById("includeNumbers");
 const includeSymbols = document.getElementById("includeSymbols");
+const copyPassword1 = document.getElementById("password1");
+const copyPassword2 = document.getElementById("password2");
+
+password1.addEventListener("click", function() {
+    copyPassword("password1");
+});
+password2.addEventListener("click", function() {
+    copyPassword("password2");
+});
+generateButton.addEventListener("click", generatePassword);
+
 
 /* generate a password */
 function generatePassword()
@@ -77,7 +89,7 @@ slider.oninput = function()
 }
 passwordLengthDisplay.textContent = slider.value;
 
-/* copy to clipboard */
+/* copy password to clipboard */
 function copyPassword(elementId) {
     const text = document.getElementById(elementId).textContent;
     if (!text) return;
