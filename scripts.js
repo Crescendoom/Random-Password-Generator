@@ -12,14 +12,13 @@ noNumbers.splice(52, 10);
 /* DOM */ 
 const slider = document.getElementById("myRange");
 const passwordLengthDisplay = document.getElementById("passwordLength");
-const password1 = document.getElementById("password1");
-const password2 = document.getElementById("password2");
+let password1 = document.getElementById("password1");
+let password2 = document.getElementById("password2");
 const generateButton = document.getElementById("generate-btn");
 const includeNumbers = document.getElementById("includeNumbers");
 const includeSymbols = document.getElementById("includeSymbols");
-const copyPassword1 = document.getElementById("password1");
-const copyPassword2 = document.getElementById("password2");
 
+/* event listeners */
 password1.addEventListener("click", function() {
     copyPassword("password1");
 });
@@ -30,8 +29,7 @@ generateButton.addEventListener("click", generatePassword);
 
 
 /* generate a password */
-function generatePassword()
-{
+function generatePassword() {
     password1.textContent = "";
     password2.textContent = "";
 
@@ -76,15 +74,13 @@ function generatePassword()
 }
 
 /* generate a character */
-function generateCharacter(index) 
-{
+function generateCharacter(index) {
     const randomIndex = Math.floor(Math.random() * index.length);
     return index[randomIndex];
 }
 
 /* slider <p> length display*/
-slider.oninput = function() 
-{
+slider.oninput = function() {
     passwordLengthDisplay.textContent = this.value;
 }
 passwordLengthDisplay.textContent = slider.value;
